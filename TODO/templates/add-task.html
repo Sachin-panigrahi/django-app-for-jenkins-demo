@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block start %}
+<div class="form1">
+<form method="POST">
+{%csrf_token%}
+
+    
+        <input type="text"  placeholder="Enter name of the task" name="name"><br>
+        <input type="text"  placeholder="Enter description of the task" name="description"><br>
+        <input type="text"  placeholder="Enter status of the task" name="status"><br>
+        <br><button style="background-color: green;color: beige;">Add</button>
+    </form>
+
+
+
+</div>
+
+
+
+{% endblock %}

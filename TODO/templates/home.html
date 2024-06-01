@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<form class="form2" method="GET">
+    <input type="text" name="search">Enter The Task To Search
+</form>
+
+
+<a href="/add-task/"><button style="color: azure;background-color: brown; position: static; height: 120px;width: 120px; text-align: center;margin-top: 20px;margin-left: 700px;">ADD</button></a>
+
+
+<div class="container">
+
+<table>
+    <tr>
+        <th>SERIAL NO.</th>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>STATUS</th>
+        <th>ACTIONS</th>
+
+   </tr>
+        {% for every in queryset %}
+        <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{every.name}}</td>
+        <td>{{every.description}}</td>
+        <td>{{every.status}}</td>
+        <td><a href="/delete_task/{{every.id}}/"><button style="display: block; color: wheat;background-color: red;text-align: center; margin-left: 30px;">-</button></a>
+        <a href="/update_task/{{every.id}}/"><button style="display: block; color: wheat;background-color: blueviolet;text-align: center; margin-left: 30px;">++</button></a></td>
+    
+    </tr>
+    {% endfor %}
+
+  </table>
+</div>
+
+
+
+
+
+{% endblock %}

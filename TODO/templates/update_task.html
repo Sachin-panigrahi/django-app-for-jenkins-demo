@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block start %}
+
+<form class = "form2"method="POST">
+    {% csrf_token %}
+<input placeholder="Enter name of the task" value="{{queryset.name}}" name="name"><br>
+<input value="{{queryset.description}}" name="description"><br>
+<input value="{{queryset.status}}" name="status"><br>
+<br>
+<button style="width: 80px; background-color: aquamarine; color: chocolate;">UPDATE</button>
+</label>
+
+
+
+
+
+</form>
+
+
+
+
+
+{% endblock %}
