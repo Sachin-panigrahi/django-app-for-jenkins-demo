@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: simple-app
+        image: sachinpanigrahi/simple-app:latest
         ports:
         - containerPort: 8000
